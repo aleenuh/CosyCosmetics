@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}All Products{% endblock %}
+
+{% block content %}
+   {% for p in products %}
+       <div>
+          Name: {{ p.name }}<br/>
+          Description: {{ p.description }}<br/>
+          Price: €{{ p.price }}<br/>
+           Category: {{ p.category.name }}<br/>
+
+       </div>
+       {% if user.is_authenticated %} <!-- direct to products seperate page if logged in -->
+       <p><a href="/product/{{ p.id }}" class="button">Buy Now</a></p>
+
+       {% else %} <!-- direct to login page (must be logged in to buy) -->
+       <p><a href="/Login" class="button">Buy Now</a></p>
+       {% endif %}
+
+   {% endfor %}
+{% endblock %}

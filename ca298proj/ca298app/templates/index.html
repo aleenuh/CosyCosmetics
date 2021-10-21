@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}CosyCosmetics ♡{% endblock %}
+
+{% block content %} <!-- logo images -->
+
+    <img src="{% static 'img/cosylogo.png' %}" alt="CosyCosmetics Logo">
+    <img src="{% static 'img/cosytext.png' %}" alt="CosyCosmetics Text Logo">
+    <p></p>
+
+    <hr>
+    <div class="split">
+    {% if user.is_authenticated %} <!-- left box/links -->
+        {% if user.is_superuser %} <!-- if an admin.. (display bottom right button -> django admin and api) -->
+
+            <style> /* had to put here or else it didnt work* */
+            #ad img {
+                position: absolute;
+                bottom: 13px;
+                right: 15px;
+                opacity: 90%;
+                width: 25px;
+            }
+
+            #ad img:hover {
+                opacity: 100%;
+                transition: 0.3s;
+            }
+
+            #api img {
+                position: absolute;
+                bottom: 10px;
+                right: 50px;
+                opacity: 90%;
+            }
+
+            #api img:hover {
+                opacity: 100%;
+                transition: 0.3s;
+            }
+            </style>
+
+            <div id="ad">
+            <a href="/admin"><img src="{% static 'img/adminaccess.png' %}"/></a>
+            </div>
+
+            <div id="api">
+            <a href="/api"><img src="{% static 'img/api.png' %}"/></a>
+            </div>
+
+            <div class = "heading">
+                <center><b>Hello, {{ user.username }}! ♡</b>
+                <p></p>
+                <i>We've missed you, admin!</i>
+                </center>
+            </div>
+
+            <hr>
+
+            <div class = "linkbox1"> <!-- links -->
+                <center><a href="/about" class="links">A B O U T &nbsp; U S</a></center>
+            </div>
+            <div class = "linkbox2">
+                <center><a href="/allproducts" class="links">P R O D U C T S</a></center>
+            </div>
+            <div class = "linkbox1">
+                <center><a href="/add" class="links">A D D &nbsp; P R O D U C T S</a></center>
+            </div>
+            <div class = "linkbox2"><center><a href="/Logout" class="links">L O G &nbsp; O U T</a></center>
+            </div>
+
+        {% else %} <!-- if ur a customer..-->
+            <div class = "heading">
+                <center><b>Hello, {{ user.username }}! ♡</b>
+                <p></p>
+                <i>We've missed you!</i>
+                </center>
+            </div>
+
+            <hr>
+
+            <div class = "linkbox1"> <!-- links -->
+                <center><a href="/about" class="links">A B O U T &nbsp; U S</a></center>
+            </div>
+            <div class = "linkbox2">
+                <center><a href="/allproducts" class="links">P R O D U C T S</a></center>
+            </div>
+            <div class = "linkbox1">
+                <center><a href="/addbasket" class="links">B A S K E T</a></center>
+            </div>
+            <div class = "linkbox2"><center><a href="/Logout" class="links">L O G &nbsp; O U T</a></center>
+            </div>
+        {% endif %}
+
+    {% else %}
+        <div class = "heading">
+            <center><b>Welcome! ♡</b>
+            <p></p>
+            <i>Delivering skincare to your door!</i>
+            </center>
+        </div>
+
+        <hr>
+
+        <div class = "linkbox1"> <!-- links -->
+            <center><a href="/about" class="links">A B O U T &nbsp; U S</a></center>
+        </div>
+        <div class = "linkbox2">
+            <center><a href="/allproducts" class="links">P R O D U C T S</a></center>
+        </div>
+        <div class = "linkbox1">
+            <center><a href="/Login" class="links">B A S K E T</a></center>
+        </div>
+        <div class = "linkbox2"><center><a href="/Login" class="links">L O G &nbsp; I N</a></center>
+        </div>
+
+    {% endif %}
+    </div>
+
+    <div class="split">
+
+        <!-- javascript slideshow attempt (fix me)
+         <script>
+            var i = 0;
+            var images = [];
+            var time = 3000;
+
+            images[0] = "{% static 'img/photo1.png' %}"
+            images[1] = "{% static 'img/photo2.png' %}"
+
+            function changeImg() {
+                document.slide.src = images[i];
+
+                if (i < images.length - 1) {
+                    i++;
+                } else {
+                    i = 0;
+                }
+
+                setTimeout("changeImg()", time);
+            }
+            window.onload = changeImg;
+        </script>-->
+
+        <img src="{% static 'img/photo1.png' %}"></center>
+    </div>
+
+{% endblock %}

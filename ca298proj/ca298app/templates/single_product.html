@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+   {% if added %}
+       <h1>Added Product</h1>
+   {% endif %}
+   <p>Product name: {{ product.name }}</p>
+   <p>Product description: {{ product.description }}</p>
+   <p>Product price: €{{ product.price }}</p>
+    <p>Category: {{  product.category.name }}</p>
+    <img src="{{ product.picture.url }}" width="250" height="250"></p>
+   <p><a href="/addbasket/{{ product.id }}" class="button">Buy Now</a></p>
+    <!-- /addbasket/3 -->
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "accountbase.html" %}
+{% load static %}
+
+{% block title %}CosyCosmetics ♡ | Register{% endblock %}
+{% block content %}
+    <center><img src="{% static 'img/accountlogo.png' %}">
+    <img src="{% static 'img/cosyregister.png' %}"></center>
+    <p></p>
+    <hr>
+
+    &nbsp;
+    <div class="heading">
+    <center>
+        <b>Hello, new user! ♡</b><p></p>
+        <i>Join us and make your CosyAccount today!</i>
+    </center>
+    </div>
+    <p></p>
+    <hr>
+
+    <center>
+   <form action="." method="POST">
+   {% csrf_token %}
+   {{ form.as_table }}
+
+       <p></p>
+   <button type="submit">R E G I S T E R</button>
+   </form>
+    <p></p>
+        <a href="../admins" class="access">ADMIN ACCESS</a>
+    </center>
+
+{% endblock %}

@@ -1,0 +1,202 @@
+b { /* changing bolds */
+    color: #c6cdf4;
+    font-size: 40px;
+    text-shadow: 2px 2px #9fabe5;
+}
+
+body {/* credits to https://codepen.io/P1N2O/pen/pyBNzX - gradient changing background */
+	background: linear-gradient(-45deg, #7a88cd, #9fabe5, #bfc9f3, #dfe3f8);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    font-family: 'Nunito', sans-serif;
+}
+@keyframes gradient { /* gradient changing background */
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+.main-box { /* main white flower box */
+    background-image: url("../img/mainbox.png"); /* The image used */
+    box-shadow: 9px 13px 21px -16px rgba(0,0,0,0.37);
+    border-radius: 25px;
+    margin-top: 170px;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-right: 11px;
+    padding-left: 11px;
+    padding-top: 20px;
+    height: 590px;
+}
+
+img[src*="cosylogo.png"], img[src*="cosytext.png"], img[src*="about.png"], img[src*="aboutlogo.png"] { /* all logo pictures */
+    height: auto;
+    width: auto;
+    max-width: 270px;
+    max-height: 120px;
+}
+
+.split { /* side by side invisible box */
+    float: left;
+    width: 407px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f1f1f1;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+}
+.heading { /* welcome/hello user*/
+    line-height: 70%;
+}
+
+img[src*="photo1.png"] { /* slideshow images */
+    height: auto;
+    width: auto;
+    border: 10px solid;
+    border-image-source: linear-gradient(45deg, #a5b0e8, #c6cdf4);
+    border-image-slice: 1;
+    box-shadow: 6px 6px #9ea8e5;
+}
+
+hr { /* divider line */
+    border-top: 1px solid #c4c4c4;
+}
+
+.linkbox1 { /* darker purple links */
+    background-color: #a5b0e8;
+    height: 20px;
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 7px;
+    border-radius: 25px;
+}
+
+.linkbox2 { /* lighter purple links */
+    background-color: #c4cbf3;
+    height: 20px;
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 7px;
+    border-radius: 25px;
+}
+
+a.links { /* link text */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+a.links:hover { /* link text hover */
+    color: #727fd2;
+    transition: 0.5s;
+}
+
+
+i { /* subtext */
+    font-size: 16px;
+}
+
+/* ABOUT PAGE ADDITIONS: */
+
+.info { /* info box */
+    position: absolute;
+    top: 400px;
+    left: 1010px;
+    right: 580px;
+}
+
+img[src*="information.png"] { /* purple box */
+    height: auto;
+    width: auto;
+    max-width: 360px;
+    max-height: 360px;
+    border: 10px solid #cad4f6;
+    box-shadow: 6px 6px #9ea8e5;
+}
+
+u.infotext { /* info text */
+    color: white;
+    text-decoration: none;
+    font-size: 14.5px;
+}
+
+u.cosycosmetics { /* "CosyCosmetics" */
+    color: #828ed8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* LOGIN PAGE ADDITIONS: */
+
+img[src*="cosyaccount.png"], img[src*="accountlogo.png"], img[src*="cosyregister.png"], img[src*="cosyadmin.png"], img[src*="adminlogo.png"] { /* all logo pictures */
+    height: auto;
+    width: auto;
+    max-width: 270px;
+    max-height: 120px;
+}
+
+.account-box { /* main white flower box adjusted for login and registration */
+    background-image: url("../img/accountbox.png");
+    background-color: #f1f1f1;
+    box-shadow: 9px 13px 21px -16px rgba(0,0,0,0.37);
+    border-radius: 25px;
+    margin-top: 100px;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding-right: 11px;
+    padding-left: 11px;
+    padding-top: 20px;
+    height: 750px;
+}
+
+button { /* login/register buttons */
+    background-color: #c4cbf3;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    width: 300px;
+    height: 40px;
+    padding: 0;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px #acb5ea;
+}
+
+button:hover {
+    background-color: #acb5ea;
+    box-shadow: 5px 5px #c4cbf3;
+    transition: 0.5s;
+}
+
+
+a.registerhere { /* Register here. */
+    color: #acb5ea;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+a.registerhere:hover { /* Register here - hover. */
+    color: #c4cbf3;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+a.access { /* Register admin here. */
+    color: #727fd2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}CosyCosmetics ♡ | About{% endblock %}
+
+{% block content %} <!-- logo images -->
+
+    <img src="{% static 'img/aboutlogo.png' %}">
+    <img src="{% static 'img/about.png' %}">
+    <p></p>
+
+    <hr>
+
+    <div class="split"> <!-- left box/links -->
+        <div class = "heading">
+            <center><b>CosyCosmetics ♡</b>
+            <p></p>
+            <i>Established in 2021.</i>
+            </center>
+        </div>
+
+        <hr>
+
+        <div class = "linkbox1"> <!-- links -->
+            <center><a href="#" onclick="history.go(-1)" class="links">H O M E</a></center>
+        </div>
+        <div class = "linkbox2" class="links">
+            <center><a href="/Login" class="links">P R O D U C T S</a></center>
+        </div>
+        <div class = "linkbox1">
+            <center><a href="/Login" class="links">B A S K E T</a></center>
+        </div>
+        <div class = "linkbox2"><center><a href="/Login" class="links">L O G &nbsp; I N</a></center>
+        </div>
+    </div>
+
+    <div class="split">
+        <center><img src="{% static 'img/information.png' %}"></center>
+        <div class="info"><center>
+           <u class = "infotext">“<u class = "cosycosmetics">CosyCosmetics</u>”
+            is a cosmetic website that sells skincare products across the globe.
+                Since the pandemic hit, there has been an increased interest in skincare with the help of social media platforms.
+                People have started to take care of their skin during lockdown by investing in these products. CosyCosmetics was created
+                to deliver these products right to the homes of skincare lovers.
+                <p></p>
+                CosyCosmetics features a range of products that are for all ages. Even though people usually associate skincare
+                with females, this website targets all genders since it’s important everyone takes time to take care of what protects
+                them.</u>
+        </center></div>
+    </div>
+
+{% endblock %}
